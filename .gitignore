@@ -1,0 +1,163 @@
+# AI Models Management System .gitignore v2.0
+# Prevents large model files from being committed to Git
+
+# =============================================================================
+# MODEL FILES - NEVER COMMIT THESE!
+# =============================================================================
+
+# All model file formats
+*.bin
+*.gguf
+*.ggml
+*.safetensors
+*.h5
+*.pkl
+*.pth
+*.pt
+*.onnx
+*.tflite
+*.pb
+*.model
+*.weights
+*.checkpoint
+*.ckpt
+*.joblib
+
+# Large data files
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# =============================================================================
+# CACHE AND TEMPORARY FILES
+# =============================================================================
+
+# All cache directories
+Cache/
+**/cache/
+**/tmp/
+**/temp/
+**/.cache/
+
+# Download and processing files
+Workflows/Downloads/Active/
+Workflows/Downloads/Failed/
+Workflows/Processing/*/
+*.tmp
+*.temp
+*.download
+*.partial
+
+# =============================================================================
+# LOGS AND MONITORING
+# =============================================================================
+
+# All log files
+*.log
+System/Core/Logs/
+System/Monitoring/
+**/*.log
+
+# =============================================================================
+# SECURITY AND SENSITIVE DATA
+# =============================================================================
+
+# API keys and credentials
+System/Security/APIKeys/
+System/Security/Certificates/
+*.key
+*.secret
+*.pem
+*.crt
+config.json
+credentials.json
+.env
+.env.*
+
+# =============================================================================
+# SYSTEM-SPECIFIC FILES
+# =============================================================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# =============================================================================
+# DEVELOPMENT FILES
+# =============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+.env/
+*.egg-info/
+dist/
+build/
+
+# IDE files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.iml
+*.swp
+*.swo
+
+# =============================================================================
+# DATABASE FILES
+# =============================================================================
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+System/Core/Database/*.db
+
+# =============================================================================
+# BACKUP FILES
+# =============================================================================
+
+# Backup directories and files
+System/Backup/
+*.bak
+*.backup
+*_backup/
+*.old
+
+# =============================================================================
+# WHAT TO INCLUDE
+# =============================================================================
+
+# Scripts and configuration
+!System/Core/Scripts/**/*.ps1
+!System/Core/Scripts/**/*.py
+!System/Core/Scripts/**/*.bat
+!System/Core/Configuration/*.template.json
+
+# Documentation
+!Documentation/**/*.md
+!Documentation/**/*.txt
+!**/*.md
+!LICENSE
+!README.md
+!.gitignore
+!.gitkeep
+
+# VS Code workspace
+!*.code-workspace

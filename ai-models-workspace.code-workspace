@@ -1,0 +1,120 @@
+{
+  "settings": {
+    "terminal.integrated.profiles.windows": {
+      "AI Models Terminal": {
+        "path": "powershell.exe",
+        "args": [
+          "-NoLogo",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-Command",
+          "& { Set-Location 'D:\\AI_Models'; Write-Host '🤖 AI Models Terminal Ready!' -ForegroundColor Green; Write-Host 'Type: .\\System\\Core\\Scripts\\PowerShell\\AIModelsManager.ps1 to start' -ForegroundColor Cyan }"
+        ],
+        "icon": "robot"
+      }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "search.exclude": {
+      "**/Logs/**": true,
+      "**/Models/**/*.safetensors": true,
+      "**/Cache/**": true,
+      "**/Models/**/*.bin": true,
+      "**/Models/**/*.gguf": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "powershell.integratedConsole.showOnStartup": false,
+    "git.ignoreLimitWarning": true,
+    "terminal.integrated.fontSize": 14,
+    "python.defaultInterpreterPath": "python",
+    "python.terminal.activateEnvironment": true,
+    "explorer.confirmDelete": false,
+    "files.associations": {
+      "*.model": "binary",
+      "*.gguf": "binary",
+      "*.safetensors": "binary",
+      "*.bin": "binary"
+    },
+    "files.watcherExclude": {
+      "**/Models/**": true,
+      "**/Cache/**": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.powershell",
+      "ms-python.python",
+      "ms-toolsai.jupyter",
+      "github.copilot",
+      "eamodio.gitlens",
+      "pkief.material-icon-theme",
+      "zhuangtongfa.material-theme"
+    ]
+  },
+  "folders": [
+    {
+      "path": "D:\\AI_Models",
+      "name": "🤖 AI Models Root"
+    },
+    {
+      "path": "D:\\AI_Models\\Models",
+      "name": "📂 Models"
+    },
+    {
+      "path": "D:\\AI_Models\\System\\Core\\Scripts",
+      "name": "⚙️ Scripts"
+    },
+    {
+      "path": "D:\\AI_Models\\Documentation",
+      "name": "📚 Documentation"
+    },
+    {
+      "path": "D:\\AI_Models\\Workflows",
+      "name": "🔄 Workflows"
+    }
+  ],
+  "tasks": {
+    "tasks": [
+      {
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "panel": "new"
+        },
+        "command": "powershell",
+        "group": "build",
+        "label": "🚀 Launch AI Models Dashboard",
+        "args": [
+          "-File",
+          "D:\\AI_Models\\System\\Core\\Scripts\\PowerShell\\AIModelsManager.ps1",
+          "-Action",
+          "dashboard"
+        ],
+        "type": "shell"
+      },
+      {
+        "label": "🔄 Sync to NAS",
+        "type": "shell",
+        "args": [
+          "-File",
+          "D:\\AI_Models\\System\\Core\\Scripts\\PowerShell\\NASSync.ps1",
+          "-Action",
+          "quick"
+        ],
+        "command": "powershell",
+        "group": "build"
+      },
+      {
+        "label": "⬇️ Download Model",
+        "type": "shell",
+        "args": [
+          "-File",
+          "D:\\AI_Models\\System\\Core\\Scripts\\PowerShell\\ModelDownloader.ps1"
+        ],
+        "command": "powershell",
+        "group": "build"
+      }
+    ],
+    "version": "2.0.0"
+  }
+}

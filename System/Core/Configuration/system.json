@@ -1,0 +1,24 @@
+{
+  "version": "2.0",
+  "created": "2025-06-06 18:21:32",
+  "features": {
+    "monitoring": true,
+    "security": true,
+    "nas_sync": true,
+    "optimization": true
+  },
+  "computer": "ROGUE1",
+  "integrations": {
+    "ollama": true,
+    "git": true,
+    "vscode": true,
+    "huggingface": true
+  },
+  "paths": {
+    "cache": "D:\\AI_Models\\Cache",
+    "config": "D:\\AI_Models\\System\\Core\\Configuration",
+    "models": "D:\\AI_Models\\Models",
+    "base": "D:\\AI_Models",
+    "logs": "D:\\AI_Models\\System\\Core\\Logs"
+  }
+}
