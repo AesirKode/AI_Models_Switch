@@ -9,7 +9,7 @@ Add-Type -AssemblyName System.Drawing
 # AI-SWITCH CLEAN THEME SYSTEM
 # =============================================================================
 
-$AISwitchTheme = @{
+$global:AISwitchTheme = @{
     # Switch-inspired Colors
     SwitchGray     = [System.Drawing.Color]::FromArgb(45, 45, 45)
     SwitchBlue     = [System.Drawing.Color]::FromArgb(0, 155, 255)
